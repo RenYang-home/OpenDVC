@@ -6,7 +6,9 @@ Lu, Guo, et al. "DVC: An end-to-end deep video compression framework." Proceedin
 
 Contact:
 
-Ren Yang @ ETH Z\:urich
+Ren Yang @ ETH Zurich, Switzerland
+
+Email: ren.yang@vision.ee.ethz.ch
 
 ## Dependency
 
