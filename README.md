@@ -8,7 +8,9 @@ Lu, Guo, et al. "DVC: An end-to-end deep video compression framework." Proceedin
 
 Tenforflow 1.12
 
-BPG (download at https://bellard.org/bpg/) (In our PSNR model, we use BPG to compress I-frames instead of training learned image compression models)
+BPG (download at https://bellard.org/bpg/) 
+
+*In our PSNR model, we use BPG to compress I-frames instead of training learned image compression models
 
 Tensorflow-compression 1.0 (download at https://github.com/tensorflow/compression/releases/tag/v1.0)
 
