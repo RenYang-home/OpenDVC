@@ -4,6 +4,10 @@ An open source Tensorflow implementation of the paper:
 
 Lu, Guo, et al. "DVC: An end-to-end deep video compression framework." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR). 2019.
 
+Contact:
+
+Ren Yang @ ETH Z\:urich
+
 ## Dependency
 
 Tenforflow 1.12
@@ -23,10 +27,15 @@ We follow Lu *et al.*, DVC to feed RGB images into the deep encoder. To compress
 ```
 ffmpeg -pix_fmt yuv420p -s WidthxHeight -i  Name.yuv -vframes Frame path_to_PNG/f%03d.png
 ```
-The pre-trained codes are trained by 4 lambda values (--l), i.e., 256, 512, 1024 and 2048, with increading bit-rate/PSNR. The test code for OpenDVC encoder is used as follows.
+The pre-trained codes are trained by 4 lambda values, i.e., 256, 512, 1024 and 2048, with increading bit-rate/PSNR. The test code for OpenDVC encoder is used as follows.
 ```
 python OpenDVC_test_video.py --path path_to_PNG --l lambda
 ```
+## To do
+
+1. Release the pre-traied models optimized for MS-SSIM
+
+2. Release the codes of decoder
 
 ## Performance
 
