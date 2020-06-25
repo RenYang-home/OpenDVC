@@ -29,7 +29,7 @@ We follow Lu *et al.*, DVC to feed RGB images into the deep encoder. To compress
 ```
 ffmpeg -pix_fmt yuv420p -s WidthxHeight -i  Name.yuv -vframes Frame path_to_PNG/f%03d.png
 ```
-The pre-trained codes are trained by 4 lambda values, i.e., 256, 512, 1024 and 2048, with increading bit-rate/PSNR. The test code for OpenDVC encoder is used as follows.
+The pre-trained codes are trained by 4 lambda values, i.e., 256, 512, 1024 and 2048, with increasing bit-rate/PSNR. The test code for OpenDVC encoder is used as follows.
 ```
 python OpenDVC_test_video.py --path path_to_PNG --l lambda
 ```
