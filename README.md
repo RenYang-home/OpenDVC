@@ -42,5 +42,5 @@ python OpenDVC_test_video.py --path path_to_PNG --l lambda
 ## Performance
 
 As shown in the figures below, our OpenDVC achieves comparable rate-distortion performance with the reported results in Lu *et al.*, DVC.
-![ ](OpenDVC_performance.png)
+![ ](performance.pdf)
 
