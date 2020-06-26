@@ -4,7 +4,7 @@ An open source Tensorflow implementation of the paper:
 
 > Lu, G., Ouyang, W., Xu, D., Zhang, X., Cai, C., & Gao, Z. (2019). DVC: An end-to-end deep video compression framework. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR).
 
-In this paper, the DVC method is only optimized for PSNR. In our OpenDVC codes, we provide the PSNR-optimized re-implementation, denoted as OpenDVC (PSNR), and also the MS-SSIM-optimized model, denoted as OpenDVC (MS-SSIM).
+In this paper, the DVC method is only optimized for PSNR. In our OpenDVC codes, we provide the **PSNR-optimized** re-implementation, denoted as OpenDVC (PSNR), and also the **MS-SSIM-optimized** model, denoted as OpenDVC (MS-SSIM).
 
 Contact:
 
@@ -22,11 +22,11 @@ Pre-trained models ([Download link](https://drive.google.com/drive/folders/1gUkf
 
 BPG ([Download link](https://bellard.org/bpg/))  -- needed only for the PSNR model
 
-*In our PSNR model, we use BPG to compress I-frames instead of training learned image compression models.*
+(*In our PSNR model, we use BPG to compress I-frames instead of training learned image compression models.*)
 
 Context-adaptive image compression model, Lee et al., ICLR 2019 ([Paper](https://arxiv.org/abs/1809.10452), [Model](https://github.com/JooyoungLeeETRI/CA_Entropy_Model)) -- needed only for the MS-SSIM model
 
-*In our MS-SSIM model, we use Lee et al., ICLR 2019 to compress I-frames.*
+(*In our MS-SSIM model, we use Lee et al., ICLR 2019 to compress I-frames.*)
 
 ## How to use
 
@@ -55,7 +55,7 @@ The augments in OpenDVC encoder (OpenDVC_test_video.py) include:
 
 --metric, evaluate quality in terms of PSNR or MS-SSIM;
 
---python_path, the path to python (only used for MS-SSIM model to run Lee et al., ICLR 2019 on I-frames);
+--python_path, the path to python (only used for MS-SSIM model to run Lee *et al.*, ICLR 2019 on I-frames);
 
 --CA_model_path, the path to CA_EntropyModel_Test of Lee et al., ICLR 2019 (only used for MS-SSIM model);
 
@@ -81,6 +81,6 @@ Release the codes of decoder
 
 ## Performance
 
-As shown in the figures below, our OpenDVC (PSNR) model achieves comparable PSNR performance with the reported results in Lu *et al.*, DVC (PSNR optimized), and our OpenDVC (MS-SSIM) model obviously outperforms DVC in terms of MS-SSIM.
+As shown in the figures below, our **OpenDVC (PSNR)** model achieves comparable PSNR performance with the reported results in Lu *et al.*, DVC (PSNR optimized), and our **OpenDVC (MS-SSIM)** model obviously outperforms DVC in terms of MS-SSIM.
 ![ ](OpenDVC_curve_PSNR.png)
 ![ ](OpenDVC_curve_MS-SSIM.png)
