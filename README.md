@@ -63,7 +63,7 @@ The augments in OpenDVC encoder (OpenDVC_test_video.py) include:
 
 --N, filter number in CNN (Do not change);
 
---M, channel number of latent representations (Do not change)
+--M, channel number of latent representations (Do not change).
 ```
 
 For example, the test code for OpenDVC encoder can be used as follows.
