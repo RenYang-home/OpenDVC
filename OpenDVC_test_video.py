@@ -35,7 +35,6 @@ elif args.l == 1024:
 elif args.l == 2048:
     I_QP = 22
 
-path = '/scratch_net/maja_second/HEVC_sequences/test_raw/' + args.path + '/'
 path_com = './' + args.path + '_com_' + str(args.l) + '/'
 path_bin = './' + args.path + '_bin_' + str(args.l) + '/'
 
