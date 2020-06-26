@@ -22,7 +22,7 @@ parser.add_argument("--GOP", type=int, default=10)
 parser.add_argument("--mode", default='PSNR', choices=['PSNR', 'MS-SSIM'])
 parser.add_argument("--metric", default='PSNR', choices=['PSNR', 'MS-SSIM'])
 parser.add_argument("--python_path", default='path_to_python')
-parser.add_argument("--Lee_path", default='path_to_CA_EntropyModel_Test')
+parser.add_argument("--CA_model_path", default='path_to_CA_EntropyModel_Test')
 parser.add_argument("--l", type=int, default=1024, choices=[8, 16, 32, 64, 256, 512, 1024, 2048])
 parser.add_argument("--N", type=int, default=128, choices=[128])
 parser.add_argument("--M", type=int, default=128, choices=[128])
@@ -126,9 +126,9 @@ for gop_number in range(np.int(np.ceil(args.frame/args.GOP))):
         os.system('bpgenc -f 444 -m 9 ' + path + 'f' + str(f + 1).zfill(3) + '.png -o ' + path_bin + str(f + 1).zfill(3) + '.bin -q ' + str(I_QP))
         os.system('bpgdec ' + path_bin + str(f + 1).zfill(3) + '.bin -o ' + path_com + 'f' + str(f + 1).zfill(3) + '.png')
     elif args.mode == 'MS-SSIM':
-        os.system(args.python_path + ' ' + args.Lee_path + '/encode.py --model_type 1 --input_path ' + path + 'f' + str(f + 1).zfill(3) + '.png' +
+        os.system(args.python_path + ' ' + args.CA_model_path + '/encode.py --model_type 1 --input_path ' + path + 'f' + str(f + 1).zfill(3) + '.png' +
                   ' --compressed_file_path ' + path_bin + str(f + 1).zfill(3) + '.bin' + ' --quality_level ' + str(I_level))
-        os.system(args.python_path + ' ' + args.Lee_path + '/decode.py --compressed_file_path ' + path_bin + str(f + 1).zfill(3) + '.bin'
+        os.system(args.python_path + ' ' + args.CA_model_path + '/decode.py --compressed_file_path ' + path_bin + str(f + 1).zfill(3) + '.bin'
                   + ' --recon_path ' + path_com + 'f' + str(f + 1).zfill(3) + '.png')
 
     bits = os.path.getsize(path_bin + str(f + 1).zfill(3) + '.bin')
