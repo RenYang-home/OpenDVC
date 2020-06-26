@@ -22,11 +22,11 @@ Pre-trained models ([Download link](https://drive.google.com/drive/folders/1gUkf
 
 BPG ([Download link](https://bellard.org/bpg/))  -- needed only for the PSNR model
 
-*In our PSNR model, we use BPG to compress I-frames instead of training learned image compression models.
+*In our PSNR model, we use BPG to compress I-frames instead of training learned image compression models.*
 
 Context-adaptive image compression model, Lee et al., ICLR 2019 ([Paper](https://arxiv.org/abs/1809.10452), [Model](https://github.com/JooyoungLeeETRI/CA_Entropy_Model)) -- needed only for the MS-SSIM model
 
-*In our MS-SSIM model, we use Lee et al., ICLR 2019 to compress I-frames.
+*In our MS-SSIM model, we use Lee et al., ICLR 2019 to compress I-frames.*
 
 ## How to use
 
