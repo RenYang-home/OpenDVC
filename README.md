@@ -71,7 +71,7 @@ For example, the test code for OpenDVC encoder can be used as follows.
 python OpenDVC_test_video.py --path BasketballPass --model PSNR  --metric PSNR --l 1024
 ```
 ```
-python OpenDVC_test_video.py --path BasketballPass --model MS-SSIM  --metric MS-SSIM --python python --Lee_path ./CA_EntropyModel_Test --l 32
+python OpenDVC_test_video.py --path BasketballPass --model MS-SSIM  --metric MS-SSIM --python python --CA_model_path ./CA_EntropyModel_Test --l 32
 ```
 
 ## To do
