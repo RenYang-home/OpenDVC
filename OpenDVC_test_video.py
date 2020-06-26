@@ -62,7 +62,7 @@ Height = np.size(F1, 0)
 Width = np.size(F1, 1)
 
 if (Height % 16 != 0) or (Width % 16 != 0):
-    raise ValueError('Height and Width must be the mutiple of 16.')
+    raise ValueError('Height and Width must be a mutiple of 16.')
 
 Y0_com = tf.placeholder(tf.float32, [batch_size, Height, Width, Channel])
 Y1_raw = tf.placeholder(tf.float32, [batch_size, Height, Width, Channel])
