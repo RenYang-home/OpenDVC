@@ -14,19 +14,19 @@ Email: ren.yang@vision.ee.ethz.ch
 
 ## Dependency
 
-Tenforflow 1.12
+- Tenforflow 1.12
 
-Tensorflow-compression 1.0 ([Download link](https://github.com/tensorflow/compression/releases/tag/v1.0))
+- Tensorflow-compression 1.0 ([Download link](https://github.com/tensorflow/compression/releases/tag/v1.0))
 
-Pre-trained models ([Download link](https://drive.google.com/drive/folders/1gUkf9FNjiZw6Pcr5U_bl3jgbM1_ZpB2K?usp=sharing))
+- Pre-trained models ([Download link](https://drive.google.com/drive/folders/1gUkf9FNjiZw6Pcr5U_bl3jgbM1_ZpB2K?usp=sharing))
 
-BPG ([Download link](https://bellard.org/bpg/))  -- needed only for the PSNR model
+- BPG ([Download link](https://bellard.org/bpg/))  -- needed only for the PSNR model
 
-(*In our PSNR model, we use BPG to compress I-frames instead of training learned image compression models.*)
+  (*In our PSNR model, we use BPG to compress I-frames instead of training learned image compression models.*)
 
-Context-adaptive image compression model, Lee et al., ICLR 2019 ([Paper](https://arxiv.org/abs/1809.10452), [Model](https://github.com/JooyoungLeeETRI/CA_Entropy_Model)) -- needed only for the MS-SSIM model
+- Context-adaptive image compression model, Lee et al., ICLR 2019 ([Paper](https://arxiv.org/abs/1809.10452), [Model](https://github.com/JooyoungLeeETRI/CA_Entropy_Model)) -- needed only for the MS-SSIM model
 
-(*In our MS-SSIM model, we use Lee et al., ICLR 2019 to compress I-frames.*)
+  (*In our MS-SSIM model, we use Lee et al., ICLR 2019 to compress I-frames.*)
 
 ## How to use
 
@@ -55,7 +55,7 @@ The augments in OpenDVC encoder (OpenDVC_test_video.py) include:
 
 --metric, evaluate quality in terms of PSNR or MS-SSIM;
 
---python_path, the path to python (only used for MS-SSIM model to run Lee *et al.*, ICLR 2019 on I-frames);
+--python_path, the path to python (only used for MS-SSIM model to run Lee et al., ICLR 2019 on I-frames);
 
 --CA_model_path, the path to CA_EntropyModel_Test of Lee et al., ICLR 2019 (only used for MS-SSIM model);
 
