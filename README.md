@@ -83,4 +83,4 @@ Release the codes of decoder
 
 As shown in the figures below, our OpenDVC (PSNR) model achieves comparable PSNR performance with the reported results in Lu *et al.*, DVC, and our OpenDVC (MS-SSIM) model obviously outperforms DVC in terms of MS-SSIM.
 ![ ](OpenDVC_performance_PSNR.png)
-
+![ ](OpenDVC_performance_MS-SSIM.png)
