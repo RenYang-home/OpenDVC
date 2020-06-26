@@ -44,6 +44,7 @@ ffmpeg -pix_fmt yuv420p -s 1920x1080 -i  Name.yuv -vframes Frame -filter:v "crop
 
 The augments in OpenDVC encoder (OpenDVC_test_video.py) include:
 
+```
 --path, the path to PNG files;
 
 --frame, the total frame number to compress;
@@ -63,6 +64,7 @@ The augments in OpenDVC encoder (OpenDVC_test_video.py) include:
 --N, filter number in CNN (Do not change);
 
 --M, channel number of latent representations (Do not change)
+```
 
 For example, the test code for OpenDVC encoder can be used as follows.
 ```
