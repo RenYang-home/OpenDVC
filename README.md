@@ -45,14 +45,23 @@ ffmpeg -pix_fmt yuv420p -s 1920x1080 -i  Name.yuv -vframes Frame -filter:v "crop
 The augments in OpenDVC encoder (OpenDVC_test_video.py) include:
 
 --path, the path to PNG files;
---frame, the total frame number to compress
---GOP, the GOP size, e.g., 10
---mode, compress with the PSNR or MS-SSIM optimized model
---metric, evaluate quality in terms of PSNR or MS-SSIM
---python_path, the path to python (only used for MS-SSIM model to run Lee et al., ICLR 2019 on I-frames)
---Lee_path, the path to CA_EntropyModel_Test of Lee et al., ICLR 2019 (only used for MS-SSIM model)
---l, lambda value. The pre-trained PSNR models are trained by 4 lambda values, i.e., 256, 512, 1024 and 2048, with increasing bit-rate/PSNR. The MS-SSIM models are trained with lambda values of 8, 16, 32 and 64, with increasing bit-rate/MS-SSIM.
---N, filter number in CNN (Do not change)
+
+--frame, the total frame number to compress;
+
+--GOP, the GOP size, e.g., 10;
+
+--mode, compress with the PSNR or MS-SSIM optimized model;
+
+--metric, evaluate quality in terms of PSNR or MS-SSIM;
+
+--python_path, the path to python (only used for MS-SSIM model to run Lee et al., ICLR 2019 on I-frames);
+
+--Lee_path, the path to CA_EntropyModel_Test of Lee et al., ICLR 2019 (only used for MS-SSIM model);
+
+--l, lambda value. The pre-trained PSNR models are trained by 4 lambda values, i.e., 256, 512, 1024 and 2048, with increasing bit-rate/PSNR. The MS-SSIM models are trained with lambda values of 8, 16, 32 and 64, with increasing bit-rate/MS-SSIM;
+
+--N, filter number in CNN (Do not change);
+
 --M, channel number of latent representations (Do not change)
 
 For example, the test code for OpenDVC encoder can be used as follows.
