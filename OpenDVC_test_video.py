@@ -21,8 +21,8 @@ parser.add_argument("--frame", type=int, default=100)
 parser.add_argument("--GOP", type=int, default=10)
 parser.add_argument("--mode", default='PSNR', choices=['PSNR', 'MS-SSIM'])
 parser.add_argument("--metric", default='MS-SSIM', choices=['PSNR', 'MS-SSIM'])
-parser.add_argument("--python_path", default='/scratch_net/maja_second/Demo/bin/python')
-parser.add_argument("--Lee_path", default='/scratch_net/maja_second/CA_Entropy_Model-master/CA_EntropyModel_Test/')
+parser.add_argument("--python_path", default='path_to_python')
+parser.add_argument("--Lee_path", default='path_to_CA_EntropyModel_Test')
 parser.add_argument("--l", type=int, default=1024, choices=[8, 16, 32, 64, 256, 512, 1024, 2048])
 parser.add_argument("--N", type=int, default=128, choices=[128])
 parser.add_argument("--M", type=int, default=128, choices=[128])
@@ -47,7 +47,7 @@ elif args.l == 32:
 elif args.l == 64:
     I_level = 7
 
-path = '/scratch_net/maja_second/HEVC_sequences/test_raw/' + args.path + '/'
+path = './' + args.path + '/'
 path_com = './' + args.path + '_com_' + args.mode  + '_' + str(args.l) + '/'
 path_bin = './' + args.path + '_bin_' + args.mode  + '_' + str(args.l) + '/'
 
@@ -183,6 +183,3 @@ quality_ave = np.average(quality_frame)
 bits_ave = np.average(bits_frame / Height / Width)
 
 print('Average ' + args.metric + ' =', quality_ave, 'Average bpp =', bits_ave)
-
-file = open("./results.txt", "a")
-file.write(args.path + ' ' + str(args.l) + ' bpp = ' + str(bits_ave) + ' ssim = ' + str(quality_ave) + '\n')
