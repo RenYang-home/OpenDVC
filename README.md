@@ -78,6 +78,7 @@ python OpenDVC_test_video.py --path BasketballPass --model MS-SSIM  --metric MS-
 
 Release the codes of decoder
 
+*Note that the OpenDVC encoder generated both the encoded bit-stream and the compressed frames.*
 
 ## Performance
 
