@@ -47,9 +47,9 @@ elif args.l == 32:
 elif args.l == 64:
     I_level = 7
 
-path = './' + args.path + '/'
-path_com = './' + args.path + '_com_' + args.mode  + '_' + str(args.l) + '/'
-path_bin = './' + args.path + '_bin_' + args.mode  + '_' + str(args.l) + '/'
+path = args.path + '/'
+path_com = args.path + '_com_' + args.mode  + '_' + str(args.l) + '/'
+path_bin = args.path + '_bin_' + args.mode  + '_' + str(args.l) + '/'
 
 os.makedirs(path_com, exist_ok=True)
 os.makedirs(path_bin, exist_ok=True)
