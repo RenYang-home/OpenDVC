@@ -73,15 +73,15 @@ with tf.variable_scope("flow_motion"):
     # Y1_warp_0 = tf.contrib.image.dense_image_warp(Y0_com, flow_tensor)
 
 # Encode flow
-mt = CNN_img.MV_analysis(flow_tensor, args.N, args.M)
+flow_latent = CNN_img.MV_analysis(flow_tensor, args.N, args.M)
 
 entropy_bottleneck_mv = tfc.EntropyBottleneck()
-string_mv = entropy_bottleneck_mv.compress(mt)
+string_mv = entropy_bottleneck_mv.compress(flow_latent)
 string_mv = tf.squeeze(string_mv, axis=0)
 
-mt_hat, MV_likelihoods = entropy_bottleneck_mv(mt, training=False)
+flow_latent_hat, MV_likelihoods = entropy_bottleneck_mv(flow_latent, training=False)
 
-flow_hat = CNN_img.MV_synthesis(mt_hat, args.N)
+flow_hat = CNN_img.MV_synthesis(flow_latent_hat, args.N)
 
 # Motion Compensation
 Y1_warp = tf.contrib.image.dense_image_warp(Y0_com, flow_hat)
@@ -92,15 +92,15 @@ Y1_MC = MC_network.MC(MC_input)
 # Encode residual
 Res = Y1_raw - Y1_MC
 
-y = CNN_img.Res_analysis(Res, num_filters=args.N, M=args.M)
+res_latent = CNN_img.Res_analysis(Res, num_filters=args.N, M=args.M)
 
 entropy_bottleneck_res = tfc.EntropyBottleneck()
-string_res = entropy_bottleneck_res.compress(y)
+string_res = entropy_bottleneck_res.compress(res_latent)
 string_res = tf.squeeze(string_res, axis=0)
 
-y_hat, Res_likelihoods = entropy_bottleneck_res(y, training=False)
+res_latent_hat, Res_likelihoods = entropy_bottleneck_res(res_latent, training=False)
 
-Res_hat = CNN_img.Res_synthesis(y_hat, num_filters=args.N)
+Res_hat = CNN_img.Res_synthesis(res_latent_hat, num_filters=args.N)
 
 # Reconstructed frame
 Y1_com = tf.clip_by_value(Res_hat + Y1_MC, 0, 1)
