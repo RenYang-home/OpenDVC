@@ -87,7 +87,7 @@ flow_hat = CNN_img.MV_synthesis(mt_hat, args.N)
 Y1_warp = tf.contrib.image.dense_image_warp(Y0_com, flow_hat)
 
 MC_input = tf.concat([flow_hat, Y0_com, Y1_warp], axis=-1)
-Y1_MC = MC_network.MC_new(MC_input)
+Y1_MC = MC_network.MC(MC_input)
 
 # Encode residual
 Res = Y1_raw - Y1_MC
