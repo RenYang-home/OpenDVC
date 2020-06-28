@@ -18,7 +18,11 @@ Email: ren.yang@vision.ee.ethz.ch
 
 - Tensorflow-compression 1.0 ([Download link](https://github.com/tensorflow/compression/releases/tag/v1.0))
 
+  (*After downloading, put the folder "tensorflow_compression" to the same directory as the codes.*)
+
 - Pre-trained models ([Download link](https://drive.google.com/drive/folders/1gUkf9FNjiZw6Pcr5U_bl3jgbM1_ZpB2K?usp=sharing))
+
+  (*Download the folders, e.g., "PSNR_1024_model", to the same directory as the codes.*)
 
 - BPG ([Download link](https://bellard.org/bpg/))  -- needed only for the PSNR model
 
@@ -73,12 +77,16 @@ python OpenDVC_test_video.py --path BasketballPass --model PSNR  --metric PSNR -
 ```
 python OpenDVC_test_video.py --path BasketballPass --model MS-SSIM  --metric MS-SSIM --python python --CA_model_path ./CA_EntropyModel_Test --l 32
 ```
+The OpenDVC encoder generates the encoded bit-stream and compressed frames in two folders.
+```
+path = args.path + '/' # path to PNG
+path_com = args.path + '_com_' + args.mode  + '_' + str(args.l) + '/' # path to compressed frames
+path_bin = args.path + '_bin_' + args.mode  + '_' + str(args.l) + '/' # path to encoded bit-streams
+```
 
 ## To do
 
-Release the codes of decoder
-
-*Note that the OpenDVC encoder generated both the encoded bit-stream and the compressed frames.*
+Release the codes of decoder.
 
 ## Performance
 
