@@ -1,8 +1,12 @@
+Our latest works on learned video compression:
+> Yang, Ren, *et al.* "Learning for video compression with hierarchical quality and recurrent enhancement." *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*. 2020.
+> Yang, Ren, *et al.* "Learning for Video Compression with Recurrent Auto-Encoder and Recurrent Probability Model." *arXiv preprint arXiv:2006.13560* (2020).
+
 # OpenDVC -- An open source implementation of Deep Video Compression (DVC)
 
 An open source Tensorflow implementation of the paper:
 
-> Lu, G., Ouyang, W., Xu, D., Zhang, X., Cai, C., & Gao, Z. (2019). DVC: An end-to-end deep video compression framework. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR).
+> Lu, Guo, *et al.* "DVC: An end-to-end deep video compression framework." *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)*. 2019.
 
 In this paper, the DVC method is only optimized for PSNR. In our OpenDVC codes, we provide the **PSNR-optimized** re-implementation, denoted as OpenDVC (PSNR), and also the **MS-SSIM-optimized** model, denoted as OpenDVC (MS-SSIM).
 
