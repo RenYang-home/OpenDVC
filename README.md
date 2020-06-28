@@ -1,9 +1,10 @@
 Our latest works on learned video compression:
 
-HLVC [[Paper](https://arxiv.org/abs/2003.01966)] [[Project page](https://github.com/RenYang-home/HLVC)]
+Hierarchical Learned Video Compression (HLVC) [[Paper](https://arxiv.org/abs/2003.01966)] [[Project page](https://github.com/RenYang-home/HLVC)]
+
 > Yang, Ren, *et al.* "Learning for video compression with hierarchical quality and recurrent enhancement." *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*. 2020.
 
-RLVC [[Paper](https://arxiv.org/abs/2006.13560)]
+Recurrent Learned Video Compression (RLVC) [[Paper](https://arxiv.org/abs/2006.13560)]
 
 > Yang, Ren, *et al.* "Learning for Video Compression with Recurrent Auto-Encoder and Recurrent Probability Model." *arXiv preprint arXiv:2006.13560* (2020).
 
