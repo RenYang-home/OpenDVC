@@ -14,7 +14,7 @@ Email: ren.yang@vision.ee.ethz.ch
 
 ## Dependency
 
-- Tenforflow 1.12
+- Tensorflow 1.12
 
 - Tensorflow-compression 1.0 ([Download link](https://github.com/tensorflow/compression/releases/tag/v1.0))
 
