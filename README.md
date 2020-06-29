@@ -93,6 +93,17 @@ path = args.path + '/' # path to PNG
 path_com = args.path + '_com_' + args.mode  + '_' + str(args.l) + '/' # path to compressed frames
 path_bin = args.path + '_bin_' + args.mode  + '_' + str(args.l) + '/' # path to encoded bit-streams
 ```
+### Decoder for video
+
+The corresponding decoder for video is OpenDVC_test_video_decoder.py, with the two more arguments than the encoder, i.e., "--Height" and "--Width", which are the height and width of the input frames. In practical, these information and the GOP size can be writted in the filehead during encoding. 
+
+For example, the decoder can be used as:
+```
+python OpenDVC_test_video_decoder.py --path BasketballPass --model PSNR  --metric PSNR --l 1024
+```
+```
+python OpenDVC_test_video.py --path BasketballPass --model MS-SSIM  --metric MS-SSIM --python python --CA_model_path ./CA_EntropyModel_Test --l 32
+```
 
 ### Encoder for one frame
 
