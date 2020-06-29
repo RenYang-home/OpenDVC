@@ -169,9 +169,6 @@ For example:
 python OpenDVC_test_P-frame_decoder.py --ref BasketballPass_com/f001.png --bin BasketballPass_bin/002.bin --com BasketballPass_com/f002.png  --model PSNR --l 1024
 ```
 
-## To do
-
-Release the codes of decoder.
 
 ## Performance
 
