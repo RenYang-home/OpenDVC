@@ -110,7 +110,7 @@ We also provide the encoder for compressing one frame (OpenDVC_test_P-frame.py),
 
 --metric, evaluate quality in terms of PSNR or MS-SSIM;
 
---l, lambda value. 
+--l, lambda value;
 
 --N, filter number in CNN (Do not change);
 
