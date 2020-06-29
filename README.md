@@ -96,6 +96,27 @@ path_bin = args.path + '_bin_' + args.mode  + '_' + str(args.l) + '/' # path to 
 
 ### The encoder for one frame
 
+We also provide the encoder for compressing one frame (OpenDVC_test_P-frame.py), which can be used more flexibly. The arguments are as follows:
+```
+--ref, the path to the reference frame, e.g., ./ref.png. In (Open)DVC, it should be the previous compressed frame;
+
+--raw, the path to the current raw frame which is to be compressed, e.g., ./raw.png;
+
+--com, the path to save the compressed frame;
+
+--bin, the path to save the bitstream;
+
+--mode, compress with the PSNR or MS-SSIM optimized model;
+
+--metric, evaluate quality in terms of PSNR or MS-SSIM;
+
+--l, lambda value. 
+
+--N, filter number in CNN (Do not change);
+
+--M, channel number of latent representations (Do not change).
+```
+
 ## To do
 
 Release the codes of decoder.
