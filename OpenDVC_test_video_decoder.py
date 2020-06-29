@@ -16,7 +16,8 @@ sess = tf.Session(config=config)
 
 parser = argparse.ArgumentParser(
       formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument("--path", default='BasketballPass')
+parser.add_argument("--path_bin", default='BasketballPass_bin_PSNR_1024')
+parser.add_argument("--path_com", default='BasketballPass_dec_PSNR_1024')
 parser.add_argument("--frame", type=int, default=100)
 parser.add_argument("--GOP", type=int, default=10)
 parser.add_argument("--Height", type=int, default=240)
@@ -49,12 +50,12 @@ elif args.l == 32:
 elif args.l == 64:
     I_level = 7
 
-path = args.path + '/'
-path_com = args.path + '_dec_' + args.mode  + '_' + str(args.l) + '/'
-path_bin = args.path + '_bin_' + args.mode  + '_' + str(args.l) + '/'
+# path = args.path + '/'
+path_com = args.path_com + '/'
+path_bin = args.path_bin + '/'
 
-os.makedirs(path_com, exist_ok=True)
-os.makedirs(path_bin, exist_ok=True)
+# os.makedirs(path_com, exist_ok=True)
+# os.makedirs(path_bin, exist_ok=True)
 
 batch_size = 1
 Channel = 3
