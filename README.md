@@ -1,6 +1,6 @@
 Our latest works on learned video compression:
 
-- Hierarchical Learned Video Compression (HLVC) (pulished in **CVPR 2020**) [[Paper](https://arxiv.org/abs/2003.01966)] [[Project page](https://github.com/RenYang-home/HLVC)]
+- Hierarchical Learned Video Compression (HLVC) (**CVPR 2020**) [[Paper](https://arxiv.org/abs/2003.01966)] [[Project page](https://github.com/RenYang-home/HLVC)]
 
 - Recurrent Learned Video Compression (RLVC) [[Paper](https://arxiv.org/abs/2006.13560)]
 
