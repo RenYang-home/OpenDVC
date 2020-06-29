@@ -117,6 +117,22 @@ We also provide the encoder for compressing one frame (OpenDVC_test_P-frame.py),
 --M, channel number of latent representations (Do not change).
 ```
 
+For example:
+
+```
+python OpenDVC_test_P-frame.py --ref BasketballPass_com/f001.png --raw BasketballPass/f002.png --com BasketballPass_com/f002.png --bin BasketballPass_bin/002.bin --model PSNR  --metric PSNR --l 1024
+```
+
+### Decoder for one frame
+
+The corresponding decoder for one frame is OpenDVC_test_P-frame_decoder.py, whose auguments are the same the encoder, excluding "--raw" and "--metric".
+
+For example:
+
+```
+python OpenDVC_test_P-frame_decoder.py --ref BasketballPass_com/f001.png --bin BasketballPass_bin/002.bin --com BasketballPass_com/f002.png  --model PSNR --l 1024
+```
+
 ## To do
 
 Release the codes of decoder.
