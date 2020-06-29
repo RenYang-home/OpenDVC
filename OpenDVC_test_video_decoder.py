@@ -143,6 +143,6 @@ for gop_number in range(np.int(np.ceil(args.frame/args.GOP))):
 
         print('Decoded Frame', f + 1)#, args.metric + ' =', quality_frame[f])
 
-quality_ave = np.average(quality_frame)
+# quality_ave = np.average(quality_frame)
 
 # print('Average ' + args.metric + ' =', quality_ave)
