@@ -85,7 +85,7 @@ with open(args.bin, "rb") as ff:
     string_mv = ff.read(np.int(mv_len))
     string_res = ff.read()
 
-compressed_frame = sess.run([Y1_com],
+compressed_frame = sess.run(Y1_com,
                feed_dict={Y0_com: Y0_com_img / 255.0,
                           # Y1_raw: Y1_raw_img / 255.0,
                           string_mv_tensor: string_mv,
