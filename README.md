@@ -54,7 +54,7 @@ Note that, OpenDVC currently only supports the frames with the height and width 
 ffmpeg -pix_fmt yuv420p -s 1920x1080 -i Name.yuv -vframes Frame -filter:v "crop=1920:1072:0:0" path_to_PNG/f%03d.png
 ```
 
-### The video encoder
+### Encoder for video
 
 The augments in OpenDVC encoder (OpenDVC_test_video.py) include:
 
@@ -94,7 +94,7 @@ path_com = args.path + '_com_' + args.mode  + '_' + str(args.l) + '/' # path to 
 path_bin = args.path + '_bin_' + args.mode  + '_' + str(args.l) + '/' # path to encoded bit-streams
 ```
 
-### The encoder for one frame
+### Encoder for one frame
 
 We also provide the encoder for compressing one frame (OpenDVC_test_P-frame.py), which can be used more flexibly. The arguments are as follows:
 ```
