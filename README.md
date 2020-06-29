@@ -93,16 +93,41 @@ path = args.path + '/' # path to PNG
 path_com = args.path + '_com_' + args.mode  + '_' + str(args.l) + '/' # path to compressed frames
 path_bin = args.path + '_bin_' + args.mode  + '_' + str(args.l) + '/' # path to encoded bit-streams
 ```
+
 ### Decoder for video
 
-The corresponding decoder for video is OpenDVC_test_video_decoder.py, with the two more arguments than the encoder, i.e., "--Height" and "--Width", which are the height and width of the input frames. In practical, these information and the GOP size can be writted in the filehead during encoding. 
+The corresponding video decoder is OpenDVC_test_video_decoder.py, with the following arguments:
+```
+--path_bin, the path to bitstreams;
+
+--path_com, the path to save the decoded frames;
+
+--frame, the total frame number to decode;
+
+--GOP, the GOP size, e.g., 10;
+
+--Height, the height of frames;
+
+--Width, the width of frames; 
+
+  (In practical scenerio, the GOP size and resolution information can be writted in the filehead during encoding)
+
+--mode, compress with the PSNR or MS-SSIM optimized model;
+
+--python_path, the path to python (only used for MS-SSIM model to run Lee et al., ICLR 2019 on I-frames);
+
+--CA_model_path, the path to CA_EntropyModel_Test of Lee et al., ICLR 2019 (only used for MS-SSIM model);
+
+--l, lambda value;
+
+--N, filter number in CNN (Do not change);
+
+--M, channel number of latent representations (Do not change).
+```
 
 For example, the decoder can be used as:
 ```
-python OpenDVC_test_video_decoder.py --path BasketballPass --model PSNR  --metric PSNR --l 1024
-```
-```
-python OpenDVC_test_video.py --path BasketballPass --model MS-SSIM  --metric MS-SSIM --python python --CA_model_path ./CA_EntropyModel_Test --l 32
+python OpenDVC_test_video_decoder.py --path_bin BasketballPass_bin_PSNR_1024 --path_com BasketballPass_dec_PSNR_1024 --model PSNR --l 1024 --Height 240 --Width 416 --GOP 10 --frame 100
 ```
 
 ### Encoder for one frame
