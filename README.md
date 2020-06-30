@@ -38,7 +38,7 @@ Email: ren.yang@vision.ee.ethz.ch
 
 - Pre-trained models ([Download link](https://drive.google.com/drive/folders/1gUkf9FNjiZw6Pcr5U_bl3jgbM1_ZpB2K?usp=sharing))
 
-  (*Download the folders, e.g., "PSNR_1024_model", to the same directory as the codes.*)
+  (*Download the folder "OpenDVC_model" to the same directory as the codes.*)
 
 - BPG ([Download link](https://bellard.org/bpg/))  -- needed only for the PSNR model
 
