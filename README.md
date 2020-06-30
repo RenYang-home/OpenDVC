@@ -22,7 +22,7 @@ If our open source codes are helpful for your research, please cite our [technic
 }
 ```
 
-Contact:
+If you have any question or find any bug, please feel free to contact:
 
 Ren Yang @ ETH Zurich, Switzerland
 
