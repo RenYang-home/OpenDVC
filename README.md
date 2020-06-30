@@ -14,7 +14,7 @@ The original DVC method is only optimized for PSNR. In our OpenDVC codes, we pro
 
 If our open source codes are helpful for your research, please cite the technical report:
 ```
-@article{yang2020recurrent,
+@article{yang2020opendvc,
   title={Open{DVC}: An Open Source Implementation of the {DVC} Video Compression Method},
   author={Yang, Ren and Van Gool, Luc and Timofte, Radu},
   journal={arXiv preprint arXiv:2006.15862},
