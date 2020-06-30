@@ -16,6 +16,7 @@ sess = tf.Session(config=config)
 
 parser = argparse.ArgumentParser(
       formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+# parser.add_argument("--path", default='BasketballPass')
 parser.add_argument("--path_bin", default='BasketballPass_bin_PSNR_1024')
 parser.add_argument("--path_com", default='BasketballPass_dec_PSNR_1024')
 parser.add_argument("--frame", type=int, default=100)
