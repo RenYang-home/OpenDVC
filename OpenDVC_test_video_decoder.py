@@ -86,7 +86,7 @@ Y1_com = tf.clip_by_value(Res_hat + Y1_MC, 0, 1)
 
 
 saver = tf.train.Saver(max_to_keep=None)
-model_path = './' + args.mode + '_' + str(args.l) + '_model/model.ckpt'
+model_path = './OpenDVC_model/' + args.mode + '_' + str(args.l) + '_model/model.ckpt'
 saver.restore(sess, save_path=model_path)
 
 quality_frame = np.zeros([args.frame])
