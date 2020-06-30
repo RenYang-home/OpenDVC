@@ -112,7 +112,7 @@ elif args.metric == 'MS-SSIM':
     quality = tf.math.reduce_mean(tf.image.ssim_multiscale(Y1_com, Y1_raw, max_val=1))
 
 saver = tf.train.Saver(max_to_keep=None)
-model_path = './' + args.mode + '_' + str(args.l) + '_model/model.ckpt'
+model_path = './OpenDVC_model/' + args.mode + '_' + str(args.l) + '_model/model.ckpt'
 saver.restore(sess, save_path=model_path)
 
 quality_frame = np.zeros([args.frame])
