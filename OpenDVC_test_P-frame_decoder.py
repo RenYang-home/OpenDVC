@@ -49,7 +49,7 @@ string_res_tensor = tf.placeholder(tf.string, [])
 # Motion Decoding
 entropy_bottleneck_mv = tfc.EntropyBottleneck(dtype=tf.float32, name='entropy_bottleneck')
 flow_latent_hat = entropy_bottleneck_mv.decompress(
-    tf.expand_dims(string_mv_tensor, 0), [Height//16, Width//16, args.N], channels=args.M)
+    tf.expand_dims(string_mv_tensor, 0), [Height//16, Width//16, args.M], channels=args.M)
 
 # Residual Decoding
 entropy_bottleneck_res = tfc.EntropyBottleneck(dtype=tf.float32, name='entropy_bottleneck_1_1')
