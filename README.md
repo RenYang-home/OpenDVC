@@ -64,6 +64,8 @@ Note that, OpenDVC currently only supports the frames with the height and width 
 ffmpeg -pix_fmt yuv420p -s 1920x1080 -i Name.yuv -vframes Frame -filter:v "crop=1920:1072:0:0" path_to_PNG/f%03d.png
 ```
 
+We uploaded a prepared sequence *BasketballPass* here as a test demo, which contains the PNG files of the first 100 frames.
+
 ### Encoder for video
 
 The augments in OpenDVC encoder (OpenDVC_test_video.py) include:
