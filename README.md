@@ -48,7 +48,7 @@ Email: ren.yang@vision.ee.ethz.ch
 
   (*In our MS-SSIM model, we use Lee et al., ICLR 2019 to compress I-frames.*)
 
-## How to use
+## Test codes
 
 ### Preperation
 
@@ -181,6 +181,47 @@ For example:
 python OpenDVC_test_P-frame_decoder.py --ref BasketballPass_com/f001.png --bin BasketballPass_bin/002.bin --com BasketballPass_com/f002.png  --model PSNR --l 1024
 ```
 
+## Training your own models
+
+### Preperation
+
+- Download the training data. We train the models on the [Vimeo90k dataset](https://github.com/anchen1011/toflow) ([Download link](http://data.csail.mit.edu/tofu/dataset/vimeo_septuplet.zip)) (82G). After downloading, please run the following codes to generate "folder.npy" which contains the directories of all training samples.
+```
+def find(pattern, path):
+    result = []
+    for root, dirs, files in os.walk(path):
+        for name in files:
+            if fnmatch.fnmatch(name, pattern):
+                result.append(root)
+    return result
+
+folder = find('im1.png', 'paht_to_vimeo90k/vimeo_septuplet/sequences/')
+np.save('folder.npy', folder)
+```
+
+- Compress I-frames. In OpenDVC (PSNR), we compress I-frames (im1.png) by BPG 444 at QP = 22, 27, 32 and 37 for the models of lambda = 2048, 1024, 512 and 256, respectively. In OpenDVC (MS-SSIM), we compress I-frames by [Lee et al., ICLR 2019](https://github.com/JooyoungLeeETRI/CA_Entropy_Model) at quality level = 2, 3, 5 and 7 for the models of lambda = 8, 16, 32 and 64. The Vimeo90k dataset has ~90k 7-frame clips, we need to compress "im1.png" in each clip as I-frame. For example:
+```
+bpgenc -f 444 -m 9 im1.png -o im1_QP27.bpg -q 27
+bpgdec im1_QP27.bpg -o im1_bpg444_QP27.bpg)           
+```
+```
+python path_to_CA_model/encode.py --model_type 1 --input_path im1.png --compressed_file_path im1_level5.bin --quality_level 5
+python path_to_CA_model/decode.py --compressed_file_path im1_level5.bin --recon_path im1_level5_ssim.png      
+```
+
+- Download the pre-trained models of optical flow. Download the folder "motion_flow" ([Download link](https://drive.google.com/drive/folders/1b6W3AMpHnPddZrGte2zeQJMxZDSha_Ue?usp=sharing)) to the same directory as the codes.
+
+## Training the PSNR models
+
+Run OpenDVC_train_PSNR.py to train the PSNR models, e.g.,
+```
+python OpenDVC_train_PSNR.py --l 1024
+```
+
+We fine-tune the MS-SSIM models of lambda = 8, 16, 32 and 64 from the PSNR models of lambda = 256, 512, 1024 and 2048, respectively. For instance,
+```
+python OpenDVC_train_MS-SSIM.py --l 32
+```
 
 ## Performance
 
