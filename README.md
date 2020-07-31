@@ -211,12 +211,14 @@ python path_to_CA_model/decode.py --compressed_file_path im1_level5.bin --recon_
 
 - Download the pre-trained models of optical flow. Download the folder "motion_flow" ([Download link](https://drive.google.com/drive/folders/1b6W3AMpHnPddZrGte2zeQJMxZDSha_Ue?usp=sharing)) to the same directory as the codes.
 
-## Training the PSNR models
+### Training the PSNR models
 
 Run OpenDVC_train_PSNR.py to train the PSNR models, e.g.,
 ```
 python OpenDVC_train_PSNR.py --l 1024
 ```
+
+### Training the MS-SSIM models
 
 We fine-tune the MS-SSIM models of lambda = 8, 16, 32 and 64 from the PSNR models of lambda = 256, 512, 1024 and 2048, respectively. For instance,
 ```
