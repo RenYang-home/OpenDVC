@@ -139,7 +139,7 @@ The corresponding video decoder is OpenDVC_test_video_decoder.py, with the follo
 
 For example, the decoder can be used as:
 ```
-python OpenDVC_test_video_decoder.py --path_bin BasketballPass_bin_PSNR_1024 --path_com BasketballPass_dec_PSNR_1024 --model PSNR --l 1024 --Height 240 --Width 416 --GOP 10 --frame 100
+python OpenDVC_test_video_decoder.py --path_bin BasketballPass_bin_PSNR_1024 --path_com BasketballPass_dec_PSNR_1024 --mode PSNR --l 1024 --Height 240 --Width 416 --GOP 10 --frame 100
 ```
 
 ### Encoder for one frame
