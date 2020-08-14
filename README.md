@@ -202,7 +202,7 @@ np.save('folder.npy', folder)
 - Compress I-frames. In OpenDVC (PSNR), we compress I-frames (im1.png) by BPG 444 at QP = 22, 27, 32 and 37 for the models of lambda = 2048, 1024, 512 and 256, respectively. In OpenDVC (MS-SSIM), we compress I-frames by [Lee et al., ICLR 2019](https://github.com/JooyoungLeeETRI/CA_Entropy_Model) at quality level = 2, 3, 5 and 7 for the models of lambda = 8, 16, 32 and 64. The Vimeo90k dataset has ~90k 7-frame clips, we need to compress "im1.png" in each clip as I-frame. For example:
 ```
 bpgenc -f 444 -m 9 im1.png -o im1_QP27.bpg -q 27
-bpgdec im1_QP27.bpg -o im1_bpg444_QP27.bpg)           
+bpgdec im1_QP27.bpg -o im1_bpg444_QP27.bpg         
 ```
 ```
 python path_to_CA_model/encode.py --model_type 1 --input_path im1.png --compressed_file_path im1_level5.bin --quality_level 5
