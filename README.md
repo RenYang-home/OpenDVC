@@ -94,10 +94,10 @@ The augments in OpenDVC encoder (OpenDVC_test_video.py) include:
 
 For example, the test code for OpenDVC encoder can be used as follows.
 ```
-python OpenDVC_test_video.py --path BasketballPass --model PSNR  --metric PSNR --l 1024
+python OpenDVC_test_video.py --path BasketballPass --mode PSNR  --metric PSNR --l 1024
 ```
 ```
-python OpenDVC_test_video.py --path BasketballPass --model MS-SSIM  --metric MS-SSIM --python python --CA_model_path ./CA_EntropyModel_Test --l 32
+python OpenDVC_test_video.py --path BasketballPass --mode MS-SSIM  --metric MS-SSIM --python python --CA_model_path ./CA_EntropyModel_Test --l 32
 ```
 The OpenDVC encoder generates the encoded bit-stream and compressed frames in two folders.
 ```
@@ -168,7 +168,7 @@ We also provide the encoder for compressing one frame (OpenDVC_test_P-frame.py),
 For example:
 
 ```
-python OpenDVC_test_P-frame.py --ref BasketballPass_com/f001.png --raw BasketballPass/f002.png --com BasketballPass_com/f002.png --bin BasketballPass_bin/002.bin --model PSNR  --metric PSNR --l 1024
+python OpenDVC_test_P-frame.py --ref BasketballPass_com/f001.png --raw BasketballPass/f002.png --com BasketballPass_com/f002.png --bin BasketballPass_bin/002.bin --mode PSNR  --metric PSNR --l 1024
 ```
 
 ### Decoder for one frame
@@ -202,7 +202,7 @@ np.save('folder.npy', folder)
 - Compress I-frames. In OpenDVC (PSNR), we compress I-frames (im1.png) by BPG 444 at QP = 22, 27, 32 and 37 for the models of lambda = 2048, 1024, 512 and 256, respectively. In OpenDVC (MS-SSIM), we compress I-frames by [Lee et al., ICLR 2019](https://github.com/JooyoungLeeETRI/CA_Entropy_Model) at quality level = 2, 3, 5 and 7 for the models of lambda = 8, 16, 32 and 64. The Vimeo90k dataset has ~90k 7-frame clips, we need to compress "im1.png" in each clip as I-frame. For example:
 ```
 bpgenc -f 444 -m 9 im1.png -o im1_QP27.bpg -q 27
-bpgdec im1_QP27.bpg -o im1_bpg444_QP27.bpg         
+bpgdec im1_QP27.bpg -o im1_bpg444_QP27.png        
 ```
 ```
 python path_to_CA_model/encode.py --model_type 1 --input_path im1.png --compressed_file_path im1_level5.bin --quality_level 5
