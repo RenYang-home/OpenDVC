@@ -81,7 +81,7 @@ The augments in OpenDVC encoder (OpenDVC_test_video.py) include:
 
 --metric, evaluate quality in terms of PSNR or MS-SSIM;
 
---python_path, the path to python (only used for MS-SSIM model to run Lee et al., ICLR 2019 on I-frames);
+--python_path, the path to python (only used for the MS-SSIM models to run Lee et al., ICLR 2019 on I-frames);
 
 --CA_model_path, the path to CA_EntropyModel_Test of Lee et al., ICLR 2019 (only used for the MS-SSIM models);
 
@@ -92,7 +92,7 @@ The augments in OpenDVC encoder (OpenDVC_test_video.py) include:
 --M, channel number of latent representations (Do not change).
 ```
 
-For example, the test code for OpenDVC encoder can be used as follows.
+For example:
 ```
 python OpenDVC_test_video.py --path BasketballPass --mode PSNR  --metric PSNR --l 1024
 ```
@@ -126,7 +126,7 @@ The corresponding video decoder is OpenDVC_test_video_decoder.py, with the follo
 
 --mode, compress with the PSNR or MS-SSIM optimized model;
 
---python_path, the path to python (only used for MS-SSIM model to run Lee et al., ICLR 2019 on I-frames);
+--python_path, the path to python (only used for the MS-SSIM models to run Lee et al., ICLR 2019 on I-frames);
 
 --CA_model_path, the path to CA_EntropyModel_Test of Lee et al., ICLR 2019 (only used for the MS-SSIM models);
 
@@ -137,7 +137,7 @@ The corresponding video decoder is OpenDVC_test_video_decoder.py, with the follo
 --M, channel number of latent representations (Do not change).
 ```
 
-For example, the decoder can be used as:
+For example:
 ```
 python OpenDVC_test_video_decoder.py --path_bin BasketballPass_bin_PSNR_1024 --path_com BasketballPass_dec_PSNR_1024 --mode PSNR --l 1024 --Height 240 --Width 416 --GOP 10 --frame 100
 ```
