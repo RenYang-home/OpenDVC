@@ -40,7 +40,7 @@ Email: ren.yang@vision.ee.ethz.ch
 
   (*Download the folder "OpenDVC_model" to the same directory as the codes.*)
 
-- BPG ([Download link](https://bellard.org/bpg/))  -- needed only for the PSNR model
+- BPG ([Download link](https://bellard.org/bpg/))  -- needed only for the PSNR models
 
   (*In our PSNR model, we use BPG to compress I-frames instead of training learned image compression models.*)
 
@@ -83,7 +83,7 @@ The augments in OpenDVC encoder (OpenDVC_test_video.py) include:
 
 --python_path, the path to python (only used for MS-SSIM model to run Lee et al., ICLR 2019 on I-frames);
 
---CA_model_path, the path to CA_EntropyModel_Test of Lee et al., ICLR 2019 (only used for MS-SSIM model);
+--CA_model_path, the path to CA_EntropyModel_Test of Lee et al., ICLR 2019 (only used for the MS-SSIM models);
 
 --l, lambda value. The pre-trained PSNR models are trained by 4 lambda values, i.e., 256, 512, 1024 and 2048, with increasing bit-rate/PSNR. The MS-SSIM models are trained with lambda values of 8, 16, 32 and 64, with increasing bit-rate/MS-SSIM;
 
@@ -128,7 +128,7 @@ The corresponding video decoder is OpenDVC_test_video_decoder.py, with the follo
 
 --python_path, the path to python (only used for MS-SSIM model to run Lee et al., ICLR 2019 on I-frames);
 
---CA_model_path, the path to CA_EntropyModel_Test of Lee et al., ICLR 2019 (only used for MS-SSIM model);
+--CA_model_path, the path to CA_EntropyModel_Test of Lee et al., ICLR 2019 (only used for the MS-SSIM models);
 
 --l, lambda value;
 
