@@ -44,7 +44,7 @@ Email: ren.yang@vision.ee.ethz.ch
 
   (*In our PSNR model, we use BPG to compress I-frames instead of training learned image compression models.*)
 
-- Context-adaptive image compression model, Lee et al., ICLR 2019 ([Paper](https://arxiv.org/abs/1809.10452), [Model](https://github.com/JooyoungLeeETRI/CA_Entropy_Model)) -- needed only for the MS-SSIM model
+- Context-adaptive image compression model, Lee et al., ICLR 2019 ([Paper](https://arxiv.org/abs/1809.10452), [Model](https://github.com/JooyoungLeeETRI/CA_Entropy_Model)) -- needed only for the MS-SSIM models
 
   (*In our MS-SSIM model, we use Lee et al., ICLR 2019 to compress I-frames.*)
 
