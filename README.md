@@ -68,7 +68,7 @@ We uploaded a prepared sequence *BasketballPass* here as a test demo, which cont
 
 ### Encoder for video
 
-The augments in OpenDVC encoder (OpenDVC_test_video.py) include:
+The augments in the OpenDVC encoder (OpenDVC_test_video.py) include:
 
 ```
 --path, the path to PNG files;
