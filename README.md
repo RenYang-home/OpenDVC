@@ -2,7 +2,7 @@
 
 - Hierarchical Learned Video Compression (HLVC) (**CVPR 2020**) [[Paper](https://arxiv.org/abs/2003.01966)] [[Codes](https://github.com/RenYang-home/HLVC)]
 
-- Recurrent Learned Video Compression (RLVC) (**IEEE J-STSP 2021**) [[Paper](https://arxiv.org/abs/2006.13560)] [[Codes](https://github.com/RenYang-home/RLVC)]
+- Recurrent Learned Video Compression (RLVC) (**IEEE J-STSP 2021**) [[Paper](https://ieeexplore.ieee.org/abstract/document/9288876/)] [[Codes](https://github.com/RenYang-home/RLVC)]
 
 # OpenDVC -- An open source implementation of the DVC Video Compression Method
 
