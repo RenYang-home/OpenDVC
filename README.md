@@ -178,7 +178,7 @@ The corresponding decoder for one frame is OpenDVC_test_P-frame_decoder.py, whos
 For example:
 
 ```
-python OpenDVC_test_P-frame_decoder.py --ref BasketballPass_com/f001.png --bin BasketballPass_bin/002.bin --com BasketballPass_com/f002.png  --model PSNR --l 1024
+python OpenDVC_test_P-frame_decoder.py --ref BasketballPass_com/f001.png --bin BasketballPass_bin/002.bin --com BasketballPass_com/f002.png  --mode PSNR --l 1024
 ```
 
 ## Training your own models
