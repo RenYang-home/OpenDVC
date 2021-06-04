@@ -195,7 +195,7 @@ def find(pattern, path):
                 result.append(root)
     return result
 
-folder = find('im1.png', 'paht_to_vimeo90k/vimeo_septuplet/sequences/')
+folder = find('im1.png', 'path_to_vimeo90k/vimeo_septuplet/sequences/')
 np.save('folder.npy', folder)
 ```
 
