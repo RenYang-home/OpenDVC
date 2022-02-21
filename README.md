@@ -58,7 +58,7 @@ We follow Lu *et al.*, DVC to feed RGB images into the deep encoder. To compress
 ffmpeg -pix_fmt yuv420p -s WidthxHeight -i Name.yuv -vframes Frame path_to_PNG/f%03d.png
 ```
 
-Note that, OpenDVC currently only supports the frames with the height and width as the multiples of 16. The original DVC method requires the multiples of 32. Therefore, when using OpenDVC, please first crop frames, e.g.,
+Note that, OpenDVC currently only supports the frames with the height and width as the multiples of 16. The original DVC method requires the multiples of 64. Therefore, when using OpenDVC, please first crop frames, e.g.,
 
 ```
 ffmpeg -pix_fmt yuv420p -s 1920x1080 -i Name.yuv -vframes Frame -filter:v "crop=1920:1072:0:0" path_to_PNG/f%03d.png
