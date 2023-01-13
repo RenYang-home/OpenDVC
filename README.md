@@ -6,6 +6,8 @@
 
 - Perceptual Learned Video Compression (PLVC) (**IJCAI 2022**) [[Paper](https://arxiv.org/abs/2109.03082)]
 
+- Advanced Learned Video Compression (ALVC) (**IEEE T-CSVT 2022**) [[Paper](https://ieeexplore.ieee.org/abstract/document/9950550)] [[Codes](https://github.com/RenYang-home/ALVC)]
+
 # OpenDVC -- An open source implementation of the DVC Video Compression Method
 
 An open source Tensorflow implementation of the paper:
