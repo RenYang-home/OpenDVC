@@ -4,7 +4,7 @@
 
 - Recurrent Learned Video Compression (RLVC) (**IEEE J-STSP 2021**) [[Paper](https://ieeexplore.ieee.org/abstract/document/9288876/)] [[Codes](https://github.com/RenYang-home/RLVC)]
 
-- Perceptual Learned Video Compression (PLVC) (**IJCAI 2022**) [[Paper](https://arxiv.org/abs/2109.03082)]
+- Perceptual Learned Video Compression (PLVC) (**IJCAI 2022**) [[Paper](https://arxiv.org/abs/2109.03082)] [[Codes](https://github.com/RenYang-home/PLVC)]
 
 - Advanced Learned Video Compression (ALVC) (**IEEE T-CSVT 2022**) [[Paper](https://ieeexplore.ieee.org/abstract/document/9950550)] [[Codes](https://github.com/RenYang-home/ALVC)]
 
