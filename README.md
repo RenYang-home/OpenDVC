@@ -30,7 +30,7 @@ If you have any question or find any bug, please feel free to contact:
 
 Ren Yang @ ETH Zurich, Switzerland
 
-Email: ren.yang@vision.ee.ethz.ch
+Email: r.yangchn@gmail.com
 
 ## Dependency
 
