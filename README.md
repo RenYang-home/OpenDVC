@@ -42,7 +42,7 @@ Email: r.yangchn@gmail.com
 
 - Pre-trained models ([Download link](https://drive.google.com/drive/folders/1gUkf9FNjiZw6Pcr5U_bl3jgbM1_ZpB2K?usp=sharing))
 
-  (*Download the folder "OpenDVC_model" to the same directory as the codes.*)
+  (*Download model to "OpenDEV_model" directory  as the codes describe.*)
 
 - BPG ([Download link](https://bellard.org/bpg/))  -- needed only for the PSNR models
 
